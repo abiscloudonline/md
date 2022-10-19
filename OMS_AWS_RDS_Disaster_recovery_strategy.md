@@ -17,17 +17,4 @@ Opportunities to automate decrease chances of error and improve recovery time
 ## Disaster recovery of RDS
 Amazon RDS creates and saves automated backups of your DB instance during the backup window of your DB instance. 
 Creates a storage volume snapshot of your DB instance, backing up the entire DB instance and not just individual databases
-## Automated backups follow these rules:
- DB instance must be in the AVAILABLE state for automated backups to occur. 
- Automated backups don't occur while your DB instance is in a state other than AVAILABLE, for example STORAGE_FULL.
- Automated backups don't occur while a DB snapshot copy is running in the same AWS Region for the same DB instance.
-## DB Snapshots:
-The first snapshot of a DB instance contains the data for the full DB instance. 
-Subsequent snapshots of the same DB instance are incremental, which means that only the data that has changed after your most recent snapshot is saved
-## Cross Region Backups:
-For added disaster recovery capability, you can configure your Amazon RDS database instance to replicate snapshots and transaction logs to a destination AWS Region of your choice. 
-When backup replication is configured for a DB instance, RDS initiates a cross-Region copy of all snapshots and transaction logs as soon as they are ready on the DB instance.
-## I/O activity:
- Creating this DB snapshot on a Single-AZ DB instance results in a brief I/O suspension that can last from a few seconds to a few minutes.
- For PostgreSQL, I/O activity is not suspended on your primary during backup for Multi-AZ deployments, because the backup is taken from the standby.
 ![image](https://user-images.githubusercontent.com/107330427/196693686-55e7f49a-684d-4cf1-a522-b018084efa2d.png)
