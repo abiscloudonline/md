@@ -1,15 +1,15 @@
 ## Amazon RDS:
 Collection of managed services that makes it simple to set up, operate, and scale databases in the cloud.
 ## What is Multi-AZ:
-    In Multi-AZ deployment, Amazon RDS automatically creates a primary database (DB) instance and synchronously replicates the data to an
+ * In Multi-AZ deployment, Amazon RDS automatically creates a primary database (DB) instance and synchronously replicates the data to an
 instance in a different availability zone.
- When it detects a failure, Amazon RDS automatically fails over to a standby instance without manual intervention.
+ * When it detects a failure, Amazon RDS automatically fails over to a standby instance without manual intervention.
 ## Read Replica:
  The read replica operates as a DB instance that allows only read-only connections;
   Applications can connect to a read replica just as they would to any DB instance.
   Amazon RDS replicates all databases in the source DB instance.
 ## Disaster Recovery:
-# Advantages of DR in cloud over traditional environments:
+## Advantages of DR in cloud over traditional environments:
 Recover quickly from a disaster with reduced complexity
 Simple and repeatable testing allow you to test more easily and more frequently
 Lower management overhead decreases operational burden
